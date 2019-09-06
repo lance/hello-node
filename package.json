@@ -1,0 +1,17 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "A simple Node.js hello world",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "docker:build": "npm install && docker build -t docker.io/lanceball/hello-node:v1.0.0 .",
+    "docker:push": "docker push docker.io/lanceball/hello-node:v1.0.0",
+    "docker:start": "docker run --rm -it -p8080:8080 docker.io/lanceball/hello-node:v1.0.0"
+  },
+  "author": "Red Hat, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
